@@ -103,15 +103,64 @@ coffeeKiosk('아메리카노', 4);
 //     console.log(`${data1} ${data2}잔 주문완료되었습니다.`);
 // }
 console.log(`----------------매개변수 문제 풀이`)
-function coffeeKiosk2(temperature, menu, num=1){
+function coffeeKiosk2(hotIce, menu, num=1){
     const msg = '잔 주문완료되었습니다.'//바뀌지 않는 문구라 const로 작성.
-    console.log(temperature, menu, num, msg);
+    const type = ['따뜻한','차가운'];//반복되는 데이터를 배열2개 만들어서 고를수있게함
+    console.log(type[hotIce], menu, num, msg);
 }
-coffeeKiosk2('따뜻한', '카페라떼', 2);
-coffeeKiosk2('차가운', '아메리카노');
-coffeeKiosk2('따뜻한', '녹차라떼', 2);
-coffeeKiosk2('차가운', '아메리카노');
+coffeeKiosk2(0, '카페라떼', 2);
+coffeeKiosk2(1, '아메리카노');
+coffeeKiosk2(0, '녹차라떼', 2);
+coffeeKiosk2(1, '아메리카노');
 //따뜻한 카페라떼 2 잔 주문완료되었습니다.
 //차가운 아메리카노 1 잔 주문완료되었습니다.
 //따뜻한 녹차라떼 2 잔 주문완료되었습니다.
 //차가운 아메리카노 1 잔 주문완료되었습니다.
+console.log(`----------------함수의 리턴(return)`)
+//더하기 알고리즘
+//함수 내부 {}는 대기장소로 호츨하지 않는한 절대 실행되지 않는다. 
+//함수 외부는 {}가 끝난 위치로 함수를 호출해서 실행할 수 있는 위치다.
+//함수 내에서 return을 작성하면 내부의 데이터를 함수 외부로 반환해서 실행시키거나 데이터를 전달하는 것을 말한다.
+function plusFunc(num){
+    let total = num+1;
+    return total; //리턴으로 실행함수가 아닌 값만 보냈다면?
+}
+plusFunc(2);
+//호출 할때 리턴이 보낸 반환값을 묶어주는 실행함수를 별도로 작성한다.
+console.log(plusFunc(2));
+console.log(`----------------구구단 알고리즘(리턴과 매개변수 활용)`)
+let dan99 = ''; //전역변수(초기값). 앞으로 문자데이터가 들어올 예정으로 빈문자초기값
+function dan99Func(num){
+    dan99 = `${num}x1=${num*1} `;
+    //(아래 식 풀어쓰면->) dan99 = dan99 + `${num}x2=${num*2} `
+    // 기존 dan99변수에 우측데이터를 더해서 앞dan99에 대입해라.
+    dan99 += `${num}x2=${num*2} `;
+    dan99 += `${num}x3=${num*3} `;
+    dan99 += `${num}x4=${num*4} `;
+    dan99 += `${num}x5=${num*5} `;
+    dan99 += `${num}x6=${num*6} `;
+    dan99 += `${num}x7=${num*7} `;
+    dan99 += `${num}x8=${num*8} `;
+    dan99 += `${num}x9=${num*9}`;
+    return dan99;
+}
+dan99Func(2); //구구단 2단
+console.log(dan99Func(2)); //실행함수
+console.log(`----------------할인율 계산기`)
+// 27900원을 입력했을 때(가격은 달라질 수 있음)
+// 입력한 가격에 대한 5%, 10%, 20%, 30%, 40%, 50% 할인율 동시출력
+// 10% 할인율 계산법 : 가격 * 0.9
+// 4% 할인율 계산법 : 100-4 = 96 -> 가격 * 0.96
+// 결과예시 ) 5% 할인율 결과 : ????원
+let discountResult = '';
+function discount(price){
+    discountResult = `5% 할인률 결과 : ${price * 0.95}원`;
+    discountResult += `10% 할인률 결과 : ${price * 0.9}원`;
+    discountResult += `20% 할인률 결과 : ${price * 0.8}원`;
+    discountResult += `30% 할인률 결과 : ${price * 0.7}원`;
+    discountResult += `40% 할인률 결과 : ${price * 0.6}원`;
+    discountResult += `50% 할인률 결과 : ${price * 0.5}원`;
+    return discountResult;
+}
+// discount(27900);
+console.log(discount(27900));
