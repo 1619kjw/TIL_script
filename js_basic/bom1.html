@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM | JS</title>
+    <script src="./scripts/bom1.js" defer></script>
+    <style>
+        p {background-color:#000; color:#eee;}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="gnb">
+            <li><a href="#">메뉴1</a>
+                <ul class="lnb">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">메뉴2</a>
+        </ul>
+    </nav>
+    <main id="wrap">
+        <h1>DOM</h1>
+        <h2>document object model</h2>
+        <h2>문서 객체 모델</h2>
+        <p>HTML요소를 자바스크립트에선 HTML노드라 부른다.</p>
+        <p>HTML태그를 선택할때 <span id="func">getElementsByTagName</span>이란 내장함수를 작성해야 한다.</p>
+        <ul class="group">
+            <li class="list active">1</li> <!-- list와 active는 별개의 이름이다 -->
+            <li class="list active">2</li>
+            <li class="list">3</li>
+            <li class="list">4</li>
+        </ul>
+        <dl class="define">
+            <dt id="title">제목</dt>
+            <dd class="contents">내용</dd>
+            <dt>제목2</dt>
+            <dd class="contents">내용2</dd>
+        </dl>
+        <ol class="order">
+            <li>주문목록</li>
+            <li id="today">아이폰 16pro</li>
+            <li class="item">아이패드</li>
+            <li>애플워치</li>
+        </ol>
+    </main>
+</body>
+</html>
