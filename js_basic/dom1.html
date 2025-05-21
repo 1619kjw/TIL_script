@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-1 | JS</title>
+    <script src="./scripts/dom1.js" defer></script>
+</head>
+<body>
+    <h1>DOM 이벤트</h1>
+    <h2>마우스 이벤트</h2>
+    <ul>
+        <li><button type="button" id="buyBtn" style="background-color:yellow" onclick="userOrderMsg()">주문하기</button></li>
+        <li><button type="button" id="payBtn" onclick="payFinishMsg()">결제하기</button></li>
+        <li><button type="button" id="idBtn" onclick="idChkMsg()">아이디중복확인</button></li>
+        <li>키보드 이벤트</li>
+        <li><input type="text" placeholder="리뷰를 입력하세요" name="user_review" onkeydown="review50Msg()"></li>
+        <li><input type="text" name="user_id" placeholder="아이디" onfocus="focusGreen()" onblur="blurGray()"></li>
+        <li><input type="password" name="user_pw" placeholder="비밀번호" onkeydown="userPwMsg()"></li>
+        <li><input type="number" value="1" name="product_num" onfocus="focusbgYellow()" onblur="blurbgWhite()"></li>
+    </ul>
+    <h1>이벤트와 콜백함수</h1>
+    <dl>
+        <dt>회원가입</dt>
+        <dd><a href="#" class="google_join">구글아이디로 가입하기</a></dd>
+        <dd>위 a태그 클릭 시 구글 주소가 새창으로 뜨는 알고리즘</dd>
+        <dt>가입 복습</dt>
+        <dd><a href="#" class="naver_join">네이버 아이디로 가입하기</a></dd>
+        <dd><a href="#" class="kakao_join">카카오 아이디로 가입하기</a></dd>
+        <dt>현재 페이지 변경방법</dt>
+        <dd><a href="#" class="file_link">5/20 파일보기</a></dd>
+        <dd><a href="#" class="index_link">index.html 파일보기</a></dd>
+        <dd><a href="#" class="readme_link">README.md 파일보기</a></dd>
+        <dt>폼(form)을 제어하는 자바스크립트</dt>
+        <dd>
+            <form action="#" method="get">
+                <button type="button" id="num_btn_minus">-</button>
+                <input type="number" name="num">
+                <button type="button" id="num_btn">+</button>
+            </form>
+        </dd>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+    </dl>
+</body>
+</html>
