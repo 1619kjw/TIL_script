@@ -1,0 +1,41 @@
+body, html {background-color:#95efbd; padding:0 10px;}
+main {
+    background-color:#fff;
+    max-width:420px; min-width:320px;
+    margin:50px auto 0;
+}
+main .top {display:flex; justify-content:space-between; padding:10px;}
+main .top .profile {display:flex; flex-flow:row nowrap; align-items:center;}
+main .top .profile .photo {/* 프로필사진 */
+    border-radius:50%;
+    width:25px; height:25px;
+    background:url(https://images.unsplash.com/photo-1500835556837-99ac94a94552?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8fDB8fHww) center / cover;
+}
+main .top .profile em {font-weight:600; font-size:0.875rem; margin:0 4px;}
+main .top .profile .certified {color:#14ce66; font-size:0.75rem;}
+main .top #top_menu {font-size:0.75rem;}
+main .photo {}
+main .photo img {width:100%;}/* 이미지는 고정px을 가지니까 크기 따로 입력 */
+main .menu {display:flex; justify-content:space-between; padding:10px;}
+main .menu .left {display:flex;}
+main .menu .left > * {width:24px;}
+main .menu .left img {/* left안의 모든 img(중간태그생략) */
+    width:100%;/* 부모크기따라감 */
+}
+main .menu .left .like {}
+main .menu .left .like img {}
+main .menu .left .comment {margin:0 12px;}
+main .menu .left .comment img {}
+main .menu .left .share {}
+main .menu .left .share img {}
+main .menu * a {} /* menu영역 공통 a태그 */
+main .menu .right_save {}
+main .menu .right_save img {}
+main .contents {padding:10px;}
+main .contents .story {font-size:0.875rem;}
+main .contents .tag {margin:14px 0;}
+main .contents .tag span {
+    background:#f5f5f5; color:#146ece; font-size:0.75rem;
+}
+main .contents .date {font-size:0.75rem; color:#aaa;}
+
