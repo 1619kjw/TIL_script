@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다이어트 체중계</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/scale.css">
+    <script src="./scripts/scale.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>다이어트 체중계</h1>
+        <p>당신의 건강체중을 알아보세요!</p>
+        <ul class="info">
+            <li>
+                <span>현재 키 :</span>
+                <input type="number" name="user_height">
+            </li>
+            <li>
+                <span>현재 몸무게 :</span>
+                <input type="number" name="user_weight">
+            </li>
+        </ul>
+        <button type="button" id="result_btn">적정체중결과보기</button>
+        <p id="result"><!-- 결과출력위치 --></p>
+    </main>
+</body>
+</html>
