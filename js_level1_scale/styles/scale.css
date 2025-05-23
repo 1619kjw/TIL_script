@@ -2,7 +2,8 @@ body, html {padding: 0 10px; background-color:#f5f5f5;}
 main {
     max-width:420px; min-width:320px;
     margin:30px auto 0; text-align:center;
-    border:2px solid aqua;
+    border:2px solid aqua; padding:60px 40px;
+    background-color:antiquewhite;
 }
 main h1 {
     font-weight:600; font-size:2.5rem;
@@ -11,7 +12,11 @@ main p {
     font-weight:500; font-size:1.25rem;
     margin:20px 0;
 }
-main p:first-child {}
+main p:first-of-type {/* child는 종류가 달라도 다 자식으로 취급해서,oftype하기. */
+    width:300px; height:300px;
+    background:url(../images/hamster.png) center / cover;
+    display:inline-block;
+}
 main .info {
     border:1px solid red;
 }
@@ -22,6 +27,9 @@ main .info li input {}
 main #result_btn {
     background-color:orange;
     padding:10px 30px;
-    border-radius:50%;
+    /* width:200px; height:20px; */
+    border-radius:50px;
 }
-main #result {}
+main #result {font-weight:400; }
+/* 자바스크립트에서 동적으로 생성한 HTML 꾸미기 속성 */
+main #result em {color:#f00;}
