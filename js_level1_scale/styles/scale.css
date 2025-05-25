@@ -11,7 +11,7 @@ main h1 {
 }
 main p {
     font-weight:500; font-size:1.25rem;
-    margin:20px 0;
+    margin:20px 0 0;
 }
 main p:first-of-type {/* child는 종류가 달라도 다 자식으로 취급해서,oftype하기. */
     width:300px; height:300px;
@@ -19,17 +19,27 @@ main p:first-of-type {/* child는 종류가 달라도 다 자식으로 취급해
     display:inline-block;
 }
 main .info {
-    border:1px solid red;
+    padding:30px 0 30px;
+    background-color:#fff; border-radius:20px;
+    border:2px solid #cbb38d;
 }
 main .info li {}
-main .info li:first-child {margin-bottom:20px;}
-main .info li span {}
-main .info li input {}
+main .info li:first-child {
+    margin-bottom:20px;
+    position:relative; right:-14px;
+}
+main .info li span {font-weight:500;}
+main .info li input {
+    width:100px; height:30px;
+    border-radius:5px; border:2px solid #ddd;
+}
 main #result_btn {
     background-color:orange;
     padding:10px 30px;
     /* width:200px; height:20px; */
     border-radius:50px;
+    margin:30px 0 0;
+    color:#fff;
 }
 main #result {font-weight:400; }
 /* 자바스크립트에서 동적으로 생성한 HTML 꾸미기 속성 */
