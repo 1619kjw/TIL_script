@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리데이터 | JS</title>
+    <script>
+        //내부스크립트 작성위치
+        console.log(Boolean(null));//null이 논리적데이터로 뭔지 콘솔출력
+        console.log(Boolean(undefined));
+        console.log(Boolean(NaN));
+        console.log(Boolean(0));
+        console.log(Boolean('')); //-------여기까지 거짓에 대한 값
+        console.log(Boolean('hello'));
+        console.log(Boolean(1234));
+        console.log(Boolean(-1234));
+        console.log(Boolean([]));
+        console.log(Boolean({})); //-------여기까지 참에 대한 값
+        console.log('=========비교연산자 1. 일치연산')
+        //숫자 10과 문자 10이 같은가?
+        console.log(10 == '10'); //true(값만 비교)
+        console.log(10 === '10');//false(데이터타입까지 구분)
+        console.log('=========비교연산자 2. 부등연산')
+        //숫자10과 문자10이 다르냐?
+        console.log(10 != '10'); //false(같다->거짓)
+        console.log(10 !== '10'); //true(다르다->참)
+        console.log('=========비교연산자 3. 대소비교')
+        console.log(5 < 7); //true
+        console.log(5 > 7); //false
+        console.log(5 >= 7); //false
+        console.log(5 <= 7); //true
+        console.log('=========비교연산자 4. 변수활용')
+        const x = 15;
+        let y = x;
+        console.log(sum(y));
+        y = 10;
+        
+        // console.log(x==y);
+        function sum(z){
+            return x == z;
+        }
+        console.log('=========비교연산자 5. 함수활용')
+        let num1 = 2;
+        const num2 = ++num1;
+
+        function result(data){
+            return num2 <= data;
+        }
+
+        console.log(result(num1)); //true
+        console.log('=========조건문')
+        if(3 <= 5){
+            console.log('조건이 참일 때 실행되는 문구')
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

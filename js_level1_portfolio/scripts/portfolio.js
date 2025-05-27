@@ -60,9 +60,6 @@ thumbNailA[11].addEventListener('click',function(){
 thumbNailA[12].addEventListener('click',function(){
     popupShow(this);
 });
-thumbNailA[13].addEventListener('click',function(){
-    popupShow(this);
-});
 function popupShow(target){
     console.log('--------------함수시작위치와 에러체크')
     // console.log(this.children[0]);//정상체크
