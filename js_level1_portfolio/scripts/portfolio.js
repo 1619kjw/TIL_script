@@ -21,14 +21,54 @@ thumbNailA[0].addEventListener('click',function(){
     console.log(this); //이벤트객체자동인식하는지 확인
     // console.log(this.children); //(현재객체의 자식)이미지 태그를 잡음
     console.log(this.children[0].src);
-    console.log(popupBg.children[0].children[0].src); //팝업bg의 자식의 자식의 src확인
-    popupShow(); //팝업출력함수 호출
-    popupBg.children[0].children[0].src = this.children[0].src
+    console.log(popupBg.children[0].children[0].src); //팝업bg의 자식(contents)의 자식(img)의 src확인
+    popupShow(this); //팝업출력함수 호출
 });
-thumbNailA[1].addEventListener('click',popupShow);
-thumbNailA[2].addEventListener('click',popupShow);
-function popupShow(){
-    return popupBg.style.display = 'flex';
+thumbNailA[1].addEventListener('click',function(){
+    popupShow(this); //팝업출력함수 호출
+});
+thumbNailA[2].addEventListener('click',function(){
+    popupShow(this);
+});
+thumbNailA[3].addEventListener('click',function(){
+    popupShow(this);
+});
+thumbNailA[4].addEventListener('click',function(){
+    popupShow(this);
+});
+thumbNailA[5].addEventListener('click',function(){
+    popupShow(this);
+});
+thumbNailA[6].addEventListener('click',function(){
+    popupShow(this);
+});
+thumbNailA[7].addEventListener('click',function(){
+    popupShow(this);
+});
+thumbNailA[8].addEventListener('click',function(){
+    popupShow(this);
+});
+thumbNailA[9].addEventListener('click',function(){
+    popupShow(this);
+});
+thumbNailA[10].addEventListener('click',function(){
+    popupShow(this);
+});
+thumbNailA[11].addEventListener('click',function(){
+    popupShow(this);
+});
+thumbNailA[12].addEventListener('click',function(){
+    popupShow(this);
+});
+thumbNailA[13].addEventListener('click',function(){
+    popupShow(this);
+});
+function popupShow(target){
+    console.log('--------------함수시작위치와 에러체크')
+    // console.log(this.children[0]);//정상체크
+    popupBg.style.display = 'flex';
+    popupBg.children[0].children[0].src = target.children[0].src;
+    return; //함수종료
 }
 
 // 3. (팝업 실행 기준) 배경(popup_bg)클릭 시 팝업 숨기기(popup_bg)
