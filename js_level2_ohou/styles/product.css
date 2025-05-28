@@ -1,0 +1,106 @@
+main {
+    background-color:aqua;
+    width:995px; margin:0 auto;
+}
+main .path {margin-bottom:26px;}
+main section {
+    display:grid;
+    grid-template-columns:630px 341px;
+    justify-content:space-between;/* grid의 정렬속성은 flex와 거의 같으니 그 특징에 맞게 쓰면 된다. */
+}
+main section .left_thumbnail {
+    background:yellow;
+    display:flex; flex-flow:row nowrap;
+}
+main section .left_thumbnail .small {}
+main section .left_thumbnail .small a {
+    width:56px; height:56px; display:block;
+    overflow:hidden; border-radius:5px; margin-bottom:10px;
+}
+main section .left_thumbnail .small a img {width:100%;}
+main section .left_thumbnail .big {
+    width:calc((100% - (56px + 15px)));
+    margin-left:15px;
+}
+main section .left_thumbnail .big img {width:100%;}
+main section .right_order {background:lime;}
+main section .right_order > * {margin-bottom:25px; background-color:yellow;}
+main section .right_order .brand {
+    font-size:0.875rem;
+}
+main section .right_order h1 {
+    font-size:1.375rem;
+}
+main section .right_order .review {}
+main section .right_order .review .score {}
+main section .right_order .review .score em {}
+main section .right_order .review .num {
+    font-size:0.813rem;
+}
+main section .right_order .sale_price {margin-top:25px;}
+main section .right_order .sale_price em {}
+main section .right_order .sale_price del {color:#777;}
+main section .right_order > .price {
+    font-size:2rem;
+}
+/* price가 밑에 total에도 있어서 꺽쇠표시 */
+main section .right_order > .price em {
+    font-weight:700;
+}
+main section .right_order .benefit_delivery {
+    overflow:hidden;
+}
+main section .right_order .benefit_delivery dt {
+    width:80px; background:pink;
+    float:left;
+    padding:15px 0 15px;/* 이거 dd에도 주면 됨. */
+}
+main section .right_order .benefit_delivery dd {
+    width:calc(100% - 80px); background:aqua;
+    float:right;
+}
+main section .right_order .benefit_delivery dd em {
+    font-weight:700;
+}
+main section .right_order .product_option {
+    display:flex; flex-flow:column nowrap;
+}
+main section .right_order .product_option > * {
+    border-radius:5px;
+    outline:none; line-height:44px;
+    border:1px solid #aaa; padding-left:17px;
+}
+main section .right_order .product_option select[name=color] {
+    margin-bottom:25px;
+}/* 여기 select왜 나눴지? */
+main section .right_order .product_option select[name=color] option {}
+main section .right_order .product_option select[name=size] {}
+main section .right_order .product_option select[name=size] option {}
+main section .right_order .total {
+    display:flex; justify-content:space-between;
+}
+main section .right_order .total p {
+    font-size:0.875rem;
+}
+main section .right_order .total .price {
+    font-size:1.063rem; font-weight:700;
+}
+main section .right_order .total .price em {
+    font-size:1.25rem; font-weight:700;/* 왜 .price에 굵기 쓴게 안내려오지? */
+}
+main section .right_order .btn_group {
+    display:flex; justify-content:space-between;
+}
+main section .right_order .btn_group  * {
+    width:165.5px; height:57px;
+    border-radius:5px;
+    border:1px solid #59AFFF;
+    font-size:1.063rem;
+    /* 공통디자인 작성. 다른 점은 개별로 쓰기(아래) */
+}
+main section .right_order .btn_group #cart_btn {
+    background-color:#fff; color:#59AFFF;
+}
+main section .right_order .btn_group #buy_btn {
+    background-color:#59AFFF; color:#fff;
+}

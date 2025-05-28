@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>몽셸 패딩 하네스 올인원 6size 3colors | 오늘의집</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/product.css">
+    <script src="./scripts/product.js" defer></script><!-- script순서 별로 안중요 -->
+    <script src="./scripts/product.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="path">반려동물 > 강아지 > 강아지 패션 > 패딩 아우터</div><!-- 경로니까 p도 가능 -->
+        <section>
+            <div class="left_thumbnail">
+                <div class="small">
+                    <a href="#"><img src="./images/thum1.jpg" alt=""></a>
+                    <a href="#"><img src="./images/thum2.jpg" alt=""></a>
+                    <a href="#"><img src="./images/thum3.jpg" alt=""></a>
+                    <a href="#"><img src="./images/thum4.jpg" alt=""></a>
+                    <a href="#"><img src="./images/thum5.jpg" alt=""></a>
+                </div>
+                <div class="big">
+                    <img src="./images/big1.jpg" alt="">
+                    <!-- 내가 마우스 올린 썸네일에 따라서 빅의 src가 바뀌는 거니까 빅은 하나만 작성해주면 됨. -->
+                    <!-- 마우스 올렸을 때 변경될 이미지니까 어느 이미지든 상관X -->
+                </div>
+            </div>
+            <div class="right_order">
+                <p class="brand">울리</p>
+                <h1>몽셸 패딩 하네스 올인원 6size 3colors</h1>
+                <a class="review">
+                    <span class="score">
+                        <em>★</em>
+                        <em>★</em>
+                        <em>★</em>
+                        <em>★</em>
+                        <em>★</em>
+                    </span>
+                    <span class="num">123개 리뷰</span>
+                </a>
+                <p class="sale_price">
+                    <em>28%</em>
+                    <del>55,900원</del>
+                </p>
+                <p class="price"><em>39,900</em>원</p>
+                <dl class="benefit_delivery">
+                    <dt>혜택</dt>
+                    <dd><em>40P</em>적립(WELCOME 0.1% 적립)</dd>
+                    <dt>배송</dt>
+                    <dd><em>무료배송</em></dd>
+                    <dd>12:00까지 결제 시 오늘 출발</dd>
+                    <dd>일반택배</dd>
+                    <dd>제주도/도서 산간 지역 3,000원</dd>
+                    <dd>1/15(수) 도착 예정 <em>83%</em></dd>
+                </dl>
+                <div class="product_option">
+                    <select name="color"><!-- name은 그룹이름 -->
+                        <option value="">색상</option><!-- 색상이라는 큰 카테고리니까 value 필요X -->
+                        <option value="black">블랙(39,900원)</option>
+                        <option value="raspberry">라즈베리(39,900원)</option>
+                    </select>
+                    <select name="size">
+                        <option value="">사이즈</option>
+                        <option value="s">S(39,900원)</option>
+                        <option value="sm">SM(39,900원)</option>
+                        <option value="m">M(39,900원)</option>
+                    </select>
+                </div>
+                <div class="total">
+                    <p>주문금액</p>
+                    <p class="price"><em>0</em>원</p>
+                </div>
+                <div class="btn_group">
+                    <button type="button" id="cart_btn">장바구니</button>
+                    <button type="button" id="buy_btn">바로구매</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
