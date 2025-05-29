@@ -6,12 +6,20 @@
     <title>몽셸 패딩 하네스 올인원 6size 3colors | 오늘의집</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/product.css">
-    <script src="./scripts/product.js" defer></script><!-- script순서 별로 안중요 -->
+    <script src="./scripts/thumbnails.js" defer></script><!-- script순서 별로 안중요 -->
     <script src="./scripts/product.js" defer></script>
 </head>
 <body>
     <main>
-        <div class="path">반려동물 > 강아지 > 강아지 패션 > 패딩 아우터</div><!-- 경로니까 p도 가능 -->
+        <div class="path">
+            <a href="#">반려동물</a>
+            <span>></span><!-- &gt; -->
+            <a href="#">강아지</a>
+            <span>></span>
+            <a href="#">강아지 패션</a>
+            <span>></span>
+            <a href="#">패딩 아우터</a>
+        </div><!-- 경로니까 p도 가능 -->
         <section>
             <div class="left_thumbnail">
                 <div class="small">
@@ -30,7 +38,7 @@
             <div class="right_order">
                 <p class="brand">울리</p>
                 <h1>몽셸 패딩 하네스 올인원 6size 3colors</h1>
-                <a class="review">
+                <a href="#review" class="review">
                     <span class="score">
                         <em>★</em>
                         <em>★</em>
@@ -68,6 +76,21 @@
                         <option value="m">M(39,900원)</option>
                     </select>
                 </div>
+                <!-- JS에서 select클릭 시 출력되는 영역 시작 -->
+                <div class="order_select">
+                    <p class="list">
+                        색상:<em class="color">블랙</em>/
+                        사이즈:<em class="size">S</em>
+                    </p>
+                    <a href="#" class="close">X</a>
+                    <div class="order_num">
+                        <button type="button" id="minus">-</button>
+                        <input type="number" value="1" name="user_num">
+                        <button type="button" id="plus">+</button>
+                    </div>
+                    <p class="price"><em>39,900</em>원</p>
+                </div>
+                <!-- JS에서 select클릭 시 출력되는 영역 끝 -->
                 <div class="total">
                     <p>주문금액</p>
                     <p class="price"><em>0</em>원</p>
@@ -78,6 +101,9 @@
                 </div>
             </div>
         </section>
+        <section class="info">상품정보</section>
+        <section id="review">리뷰</section><!-- id를 써야, a태그에서 이동하는 대상으로 만들수 있다. -->
+        <section class="board">문의</section>
     </main>
 </body>
 </html>
