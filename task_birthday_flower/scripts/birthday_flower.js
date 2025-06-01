@@ -50,3 +50,28 @@ const birthday_flower = [
         content:'축하, 감사'
     }
 ]
+console.log(birthday_flower);
+console.log(birthday_flower[0].flower);//수선화
+
+//월을 입력하고 '탄생화와 꽃말은?'버튼 클릭 시, 각 달에 해당하는 결과 출력
+
+//초기 설정
+const inputNum = document.querySelector('input[name*=month]');
+console.log(inputNum);
+let num = 1; //초기 월
+inputNum.value = num;
+
+//'탄생화와 꽃말은?'버튼에 대한 변수
+const resultBtn = document.querySelector('#result_btn');
+console.log(resultBtn);
+resultBtn.addEventListener('click', resultFunc);
+function resultFunc(){//결과화면 보이기
+    resultContent.style.display = 'block';
+    num;
+    inputNum.value = num;
+    return resultContent.textContent= `${birthday_flower[num].month}월의 탄생화는 ${birthday_flower[num].flower}, 꽃말은 ${birthday_flower[num].content}입니다.`;
+}
+//결과화면에 대한 변수
+const resultContent = document.querySelector('#result');
+console.log(resultContent);
+resultContent.style.display = 'none';//초기값 : 결과화면 숨기기

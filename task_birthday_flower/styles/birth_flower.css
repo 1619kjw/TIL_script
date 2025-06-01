@@ -1,0 +1,31 @@
+body {   
+    padding:50px;
+}
+#birth_flower_qa {
+    background-color:aqua;
+    text-align:center;
+    width:450px; height:800px;
+    padding-top:100px;
+}
+#birth_flower_qa h1 {
+    font-size:2rem; font-weight:500;
+}
+.birth_input {
+    margin:100px 20px 50px; 
+    /* display:flex; */
+
+}
+.birth_input #birth_flower_qa .birth_info {
+    
+}
+#birth_flower_qa #result_btn {
+    display:block; margin:0 auto;
+    background-color:pink; border-radius:10px;
+    padding:20px 40px;
+    font-size:1.25rem; font-weight:500;
+}
+#birth_flower_qa #result {
+    background-color:#eee;
+    width:300px; line-height:50px;
+    margin:50px auto 0;
+}
