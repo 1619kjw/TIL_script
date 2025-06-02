@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>탄생화 꽃말 JS 과제</title>
     <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/birth_flower.css">
-    <script src="./scripts/birthday_flower.js" defer></script>
+    <link rel="stylesheet" href="./styles/flower.css">
+    <script src="./scripts/data.js" defer></script>
+    <script src="./scripts/flower.js" defer></script>
 </head>
 <body>
     <div id="birth_flower_qa">
         <h1>Q.당신의 생일은 몇월인가요?</h1>
         <div class="birth_input">
-            <input type="number" name="birth_year" class="birth_info" value="2000">년</input>
-            <input type="number" name="birth_month" class="birth_info" value="1">월</input>
-            <input type="number" name="birth_day" class="birth_info" value="1">일</input>
+            <input type="number" name="birth_year" class="birth_info" value="2000"><span>년</span>
+            <input type="number" name="birth_month" class="birth_info" value="1"><span>월</span>
+            <input type="number" name="birth_day" class="birth_info" value="1"><span>일</span>
         </div>
         <button type="button" id="result_btn">탄생화와 꽃말은?</button>
         <p id="result"><!-- 결과출력위치 --></p>

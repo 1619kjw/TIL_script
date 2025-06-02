@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./scripts/regex.js" defer></script>
+    <style>
+        main dl dd[class^=error] {color:#f00;}
+    </style>
+</head>
+<body>
+    <main>
+        <dl>
+            <dt>아이디</dt>
+            <dd><input type="text" name="user_id" placeholder="아이디는 영어만 입력가능합니다."></dd>
+            <dd class="error_id"><!-- 아이디 정규표현식 에러 시 출력위치 --></dd>
+            <dt>나이</dt>
+            <dd><input type="text" name="user_age" placeholder="숫자만 입력하세요"></dd>
+            <dd class="error_age"><!-- 정규표현식 에러 시 출력위치 --></dd>
+            <dt>비밀번호</dt>
+            <dd><input type="password" name="user_pw" placholder="알파벳과 숫자 조합만 가능합니다."></dd>
+            <dd class="error_pw"><!-- 정규표현식 에러 시 출력위치 --></dd>
+        </dl>
+        <section>
+            <h1>리뷰 작성</h1>
+            <textarea name="review" placeholder="리뷰를 작성하세요" maxlength="100"></textarea>
+            <p class="review_number">
+                <!-- 글자 쓰기전 초기값0. 최대제한글자수는 동적으로 변경하려고 비워놓음 -->
+                <em class="current">0</em>/
+                <span class="max"></span>
+            </p>
+            <p class="error_msg"><!-- 오류출력위치 --></p>
+        </section>
+    </main>
+</body>
+</html>

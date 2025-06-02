@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다수 조건식 else if</title>
+    <script src="./scripts/elseif.js" defer></script>
+    <style>
+        main {
+            width:500px; height:500px;
+            background:#FFDCDC; margin:0 auto;
+            position:relative;
+        }
+        main .control {
+            position:absolute; left:20px; bottom:20px;
+        }
+        main .control .btn {
+            width:32px; height:32px; border:none;
+            background:#000; color:#fff; border-radius:10px;
+        }
+        main .io {position:absolute; bottom:-25px; width:100%;}
+        main .io input {width:100%; text-align:center; padding:10px 0;}
+    </style>
+</head>
+<body>
+    <main>
+        <img src="./images/ani.gif" alt="">
+        <div class="control">
+            <button type="button" class="btn top">↑</button><!-- ㅁ+한자키로 특수문자 -->
+            <button type="button" class="btn left">←</button>
+            <button type="button" class="btn down">↓</button>
+            <button type="button" class="btn right">→</button>
+        </div>
+        <div class="io"><!-- input, output 약자 -->
+            <input type="text" placeholder="왼쪽 or 오른쪽 or 위 or 아래">
+        </div>
+    </main>
+</body>
+</html>
