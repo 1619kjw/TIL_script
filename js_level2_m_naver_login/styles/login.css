@@ -79,10 +79,10 @@ main .login_wrap .login_inner .search_join_wrap a {
 }
 main .login_wrap .login_inner .search_join_wrap a::after {
     /* 가상선택자로 구분선 만들기 */
-    content:'';
-    background-color:#000;
+    content:' | ';
+    /* background-color:#000;
     display:inline-block;
-    width:1px; height:12px;
-    /* 여백 어떻게 주지? */
+    width:1px; height:12px; */
+    /* 여백 어떻게 주지?(위처럼 빈문자열에 공백주고 구분선 줬음) */
 }
 main .login_wrap .login_inner .search_join_wrap a:last-child {color:#03c75a;}
