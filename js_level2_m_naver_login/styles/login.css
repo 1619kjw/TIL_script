@@ -1,0 +1,88 @@
+body, html {background-color:#f5f5f5;}
+main {
+    max-width:1024px; min-width:320px; margin:0 auto;
+    border:5px solid red;
+    padding-top:20px;
+}
+main .back {
+    float:left;
+}
+main .lang_group {
+    float:right;
+    position:relative;/* .lang_open의 부모위치기준 */
+}
+main .lang_group #lang_select {/* 언어선택 */}
+main .lang_group .lang_open {/* 언어목록그룹 */
+    position:absolute; right:0; background:#fff;
+    border:1px solid #ddd; box-shadow:0 0 10px rgba(0,0,0,0.1);
+    width:max-content; padding:12px;
+    display:flex; flex-flow:column nowrap;
+}
+main .lang_group .lang_open a {
+    font-size:0.85rem; line-height:2;
+}
+main .lang_group .lang_open .kr {}
+main .lang_group .lang_open .en {}
+main .lang_group .lang_open .ch1 {}
+main .lang_group .lang_open .ch2 {}
+main .lang_group .log {}
+main .login_wrap {
+    clear:both;
+    max-width:400px; margin:0 auto;
+    border:5px solid blue;
+}
+main .login_wrap h1 {
+    width:136px; height:26px;
+    background:url(../images/m_sp.png) -315px -104px;
+    margin:50px auto 40px;
+}
+main .login_wrap h1 a {
+    width:100%; height:100%;
+    display:block;
+}
+main .login_wrap h1 a .blind {display:none;}
+main .login_wrap .login_inner {}
+main .login_wrap .login_inner #login_frm {}
+main .login_wrap .login_inner #login_frm .id_pw_wrap {
+    border:1px solid #ddd; border-radius:8px;
+    display:flex; flex-flow:column nowrap;
+    overflow:hidden;
+}
+main .login_wrap .login_inner #login_frm .id_pw_wrap input {
+    padding:16px 10px;
+}
+main .login_wrap .login_inner #login_frm .id_pw_wrap input[name$=id] {
+    border-bottom:1px solid #ddd;
+}
+main .login_wrap .login_inner #login_frm .id_pw_wrap input[name$=pw] {}
+main .login_wrap .login_inner #login_frm .error_msg {
+    color:#f00; font-size:0.81rem; padding:10px 0; line-height:1.4;
+}
+main .login_wrap .login_inner #login_frm #login_btn {
+    background-color:#aaa; color:#fff;
+    width:100%; height:50px;
+    border-radius:6px;
+    margin:20px 0 20px;
+}
+main .login_wrap .login_inner #login_frm .login_chk {}
+main .login_wrap .login_inner #login_frm .login_chk #chk_state {}
+main .login_wrap .login_inner #login_frm .login_chk label {
+    font-size:0.91rem;
+}
+main .login_wrap .login_inner #login_frm .login_chk label span {}
+main .login_wrap .login_inner .search_join_wrap {
+    margin:40px 0 40px;
+    text-align:center;
+}
+main .login_wrap .login_inner .search_join_wrap a {
+    font-size:0.91rem;
+}
+main .login_wrap .login_inner .search_join_wrap a::after {
+    /* 가상선택자로 구분선 만들기 */
+    content:'';
+    background-color:#000;
+    display:inline-block;
+    width:1px; height:12px;
+    /* 여백 어떻게 주지? */
+}
+main .login_wrap .login_inner .search_join_wrap a:last-child {color:#03c75a;}

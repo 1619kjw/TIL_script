@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 로그인</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/login.css">
+    <script src="./scripts/login.js" defer></script>
+</head>
+<body>
+    <main>
+        <a href="#" class="back">뒤로</a>
+        <div class="lang_group">
+            <button type="button" id="lang_select">한국어</button>
+            <div class="lang_open">
+                <a href="#" class="kr">한국어</a>
+                <a href="#" class="en">English</a>
+                <a href="#" class="ch1">中文(简体)</a>
+                <a href="#" class="ch2">中文(台灣)</a>
+            </div>
+        </div>
+        <!-- 네이버로그인 영역 시작 -->
+        <section class="login_wrap">
+            <h1><a href="#"><span class="blind">네이버</span></a></h1>
+            <div class="login_inner">
+                <form action="#" method="post" id="login_frm">
+                    <div class="id_pw_wrap">
+                        <input type="text" name="user_id" placeholder="아이디 또는 전화번호">
+                        <input type="password" name="user_pw" placeholder="비밀번호">
+                    </div>
+                    <p class="error_msg"></p>
+                    <button type="button" id="login_btn">로그인</button>
+                    <p class="login_chk">
+                        <input type="checkbox" id="chk_state" value="chk_state">
+                        <label for="chk_state"><span>로그인 상태 유지</span></label>
+                    </p>
+                </form>
+                <div class="search_join_wrap">
+                    <a href="#">비밀번호 찾기</a>
+                    <a href="#">아이디 찾기</a>
+                    <a href="#">회원가입</a>
+                </div>
+            </div>
+            </section>
+    </main>
+</body>
+</html>
