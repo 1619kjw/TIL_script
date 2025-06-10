@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반려동물 생년월일 계산기</title>
+    <link rel="stylesheet" href="../js_level1/styles/reset.css">
+    <style>
+        main {
+            width:400px; height:700px; border:4px solid #444;
+            border-radius:30px;
+            background:url(https://i.pinimg.com/736x/e2/22/9b/e2229b154d89458690c2b222e8b02c80.jpg) no-repeat bottom center / contain;
+            text-align:center;
+            padding:40px;
+        }
+        main h1 {
+            font-size:1.5rem; font-weight:600; line-height:1.5;
+        }
+        main span {
+            
+        }
+        main span #pet_name {
+            width:60px; border-radius:5px;
+            background-color:pink;
+            margin:20px 0 20px;
+        }
+        main #birthdate {}
+        main #birth_btn {}
+        main .result {}
+        main .result .date {}
+        main .result .date em {}
+        main .result .time {}
+        main .result .time em {}
+        main .result .age {}
+        main .result .age em {}
+        main .result span {}
+    </style>
+    <script src="./scripts/Math_ex.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>반려동물이 태어난 순간부터,<br>얼마나 지났을까?</h1>
+        <span>
+            <input type="text" id="pet_name" name="pet_name" value="초코">의 생년월일을 선택하세요!
+        </span>
+        <input type="date" id="birthdate" name="birthdate" value="2024-03-14">
+        <button type="button" id="birth_btn">계산</button>
+        <div class="result">
+            <p class="date">경과 날짜 : <em></em>일</p>
+            <p class="time">경과 시간 : <em></em>시간</p>
+            <p class="age">현재 나이 : <em></em>살</p>
+            <span><!-- 최종 결과문장 출력위치 --></span>
+        </div>
+    </main>
+</body>
+</html>
