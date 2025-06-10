@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 할일</title>
+    <link rel="stylesheet" href="../js_level2_m_naver_login/styles/reset.css"><!--  reset안만들고, ../로 다른 폴더의 reset을 가져왔다 -->
+    <style>
+        main {
+            background:#FFF2EB; width:400px; height:500px;
+            text-align:center; padding:50px;
+            border-radius:24px;
+        }
+        main h1 {
+            font-size:1.5rem; font-weight:500;
+        }
+        main ul {
+            width:100%; 
+            /* 세로스크롤 : 높이값설정(%,px)+넘치는 것 자동 스크롤 생성 */
+            height:300px; overflow-y:auto;
+            border:1px solid red;
+            margin:30px 0 20px;
+        }
+        main ul li {
+            width:100%; height:40px;
+            border-radius:10px;
+            background:linear-gradient(to top, #a18cd1 10%, #fbc2eb 90%); opacity:0.7;
+            margin-bottom:10px;
+        }
+        main ul li:last-child {margin-bottom:none;}
+        main ul li span {
+            color:#444;
+            line-height:40px;
+        }
+        main ul li .del_btn {}
+        main .input_btn {}
+        main .input_btn .to {}
+        main .input_btn #to_btn {}
+    </style>
+    <script src="./scripts/to_do_list.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>오늘의 할일</h1>
+        <ul>
+            <li><span>여기에 할 일이 등록됩니다.</span><button type="button" class="del_btn">X</button></li>
+        </ul>
+        <div class="input_btn">
+            <input type="text" class="to" name="to" placdholder="할일을 입력하세요">
+            <button type="button" id="to_btn">등록</button>
+        </div>
+    </main>
+</body>
+</html>
