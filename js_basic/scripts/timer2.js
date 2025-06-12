@@ -3,11 +3,11 @@ const slideContainer = document.querySelector('.slide_container');
 slideContainer.style.transition = 'transform 0.3s';
 
 const slideTimer = setInterval(()=>{
-    console.log(`현재 num:${num}, x축값:${400*num}`)
-    num--;
-    if (num<0){num=0}
+    console.log(`현재 num:${num}, x축값:-${400*num}`)
     slideContainer.style.transform = `translateX(-${400*num}px)`
-},3000);
+    if (num < 1){num=3}
+    num--;
+},1000);
 
 
 
