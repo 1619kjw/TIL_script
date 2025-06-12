@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer</title>
+    <script src="./scripts/timer2.js" defer></script>
+    <link rel="stylesheet" href="../js_level2_ohou/styles/reset.css">
+    <style>
+        .slide_wrap {
+            width:400px;
+            overflow:hidden;
+        }
+        .slide_wrap .slide_container {
+            display:flex; flex-flow:row-reverse;
+            /* 화면크기 변화시 그냥 짤려서(?) 너비주기. */
+            /* 묶음으로 움직이니까 정확한 너비측정 */
+            width:max-content;
+            /* width:1200px; */
+            /* width:calc(400px * 3) */
+            transform:translateX(-800px);
+            /* 
+            0   = 400*0
+            400 = 400*1
+            800 = 400*2
+            (나중에 js에서 증감, 타이머 이용함)
+             */
+        }
+        .slide_wrap .slide_container .slide {
+            width:400px; height:300px; font-size:5rem;
+        }
+        .slide_wrap .slide_container .slide1 {
+            background:orange; 
+        }
+        .slide_wrap .slide_container .slide2 {
+            background:lime; 
+        }
+        .slide_wrap .slide_container .slide3 {
+            background:aqua; 
+        }
+    </style>
+</head>
+<body>
+    <!-- 슬라이드 작성 규칙 -->
+    <!-- 슬라이드 전체 기룹 (개별슬라이드부모(개별슬라이드*다수)) -->
+    <div class="slide_wrap"><!-- 슬라이드 전체 그룹(보이는 영역) -->
+        <div class="slide_container"><!-- 개별슬라이드부모(이동) -->
+            <div class="slide slide1">1</div><!-- 개별슬라이드 -->
+            <div class="slide slide2">2</div>
+            <div class="slide slide3">3</div>
+        </div>
+    </div>
+</body>
+</html>
