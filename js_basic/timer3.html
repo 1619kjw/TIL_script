@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이머 함수 활용</title>
+    <link rel="stylesheet" href="../js_level1/styles/reset.css">
+    <script src="./scripts/timer3.js" defer></script>
+    <style>
+        header {
+            width:100%; height:100px;
+            min-width:320px;
+            position:relative;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            position:absolute;
+            left:50%; top:20px; transform:translateX(-50%);
+        }
+        header h1 a {}
+        header h1 a img {}
+        main {padding:100px 0;}
+        main h1 {text-align:center; font-size:1.2rem;}
+        main > p {text-align:center; margin:10px 0 30px; font-size:0.875rem;}
+        main .product_list {/* 상품목록 1행 */
+            width:100%;
+            min-width:320px;
+            background:yellow;
+            display:flex; justify-content:space-between;
+            flex-flow:row wrap;
+        }
+        main .product_list li {/* 1행의 상품1(사진+내용) */
+            width:calc(100% / 4);
+        }
+        main .product_list li .slide_wrap {
+            /* 슬라이드의 실제 보이는 영역(기본너비100%생략) */
+            overflow:hidden;
+        }
+        main .product_list li .slide_wrap .slide_container {
+            /* 슬라이드 6개를 가지고 있는 부모(container)한테 flex로 옆으로 정렬하는 명력적용 */
+            display:flex;
+            width:max-content;
+            /* width:1920px; */
+            /* transform:translateX(-480px); */
+            transition:transform 0.3s;
+        }
+        main .product_list li .slide_wrap .slide_container .slide {
+            max-width:calc(1920px / 4);
+        }
+        main .product_list li .slide_wrap .slide_container .slide img {
+            width:100%;
+            /* max-width:400px; */
+        }
+        main .product_list li .slide_wrap .slide_container .slide1 {}
+        main .product_list li .slide_wrap .slide_container .slide2 {}
+        main .product_list li .slide_wrap .slide_container .slide3 {}
+        main .product_list li .slide_wrap .slide_container .slide4 {}
+        main .product_list li .slide_wrap .slide_container .slide5 {}
+        main .product_list li .slide_wrap .slide_container .slide6 {}
+        main .product_list li .slide_wrap .slide_container .slide1 img {}
+        main .product_list li .slide_wrap .slide_container .slide2 img {}
+        main .product_list li .slide_wrap .slide_container .slide3 img {}
+        main .product_list li .slide_wrap .slide_container .slide4 img {}
+        main .product_list li .slide_wrap .slide_container .slide5 img {}
+        main .product_list li .slide_wrap .slide_container .slide6 img {}
+        main .product_list li .contents {
+            position:relative;
+        }
+        main .product_list li .contents a {}
+        main .product_list li .contents a:nth-child(1) {}
+        main .product_list li .contents a p {
+            line-height:1.5; font-size:0.875rem;
+        }
+        main .product_list li .contents a .name {}
+        main .product_list li .contents a .price {
+            float:left;
+            font-family:'맑은 고딕', sans-serif;
+        }
+        main .product_list li .contents a .re_stock {
+            margin-left:6px; float:left;
+        }
+        main .product_list li .contents a:nth-child(2) {
+            position:absolute; right:10px; top:10px;
+        }
+        main .product_list li .contents a:nth-child(2) svg {
+            width:14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="#"><img src="./images/gentile_monster_img_set6/logo.png" alt="젠틀몬스터"></a></h1>
+    </header>
+    <main>
+        <h1>선글라스 전체보기</h1>
+        <p>독창적인 창의성을 담은 다양한 컬러와 쉐입의 선글라스를 만나보세요.</p>
+        <p class="sale_timer">남은 시간 : <em>0</em>초</p>
+        <p class="sale_btn"><button type="button" id="timer_btn">카운트다운 시작</button></p>
+        <ul class="product_list"><!-- 상품목록 1행(아마도) -->
+            <li>
+                <!-- a(이미지슬라이드) -->
+                <div class="slide_wrap"><!-- 보이는 영역 -->
+                    <a href="#" class="slide_container"><!-- 슬라이드부모 -->
+                        <div class="slide slide1"><img src="./images/gentile_monster_img_set6/gentile_01.jpg" alt=""></div>
+                        <div class="slide slide2"><img src="./images/gentile_monster_img_set6/gentile_02.jpg" alt=""></div>
+                        <div class="slide slide3"><img src="./images/gentile_monster_img_set6/gentile_03.jpg" alt=""></div>
+                        <div class="slide slide4"><img src="./images/gentile_monster_img_set6/gentile_04.jpg" alt=""></div>
+                        <div class="slide slide5"><img src="./images/gentile_monster_img_set6/gentile_05.jpg" alt=""></div>
+                        <div class="slide slide6"><img src="./images/gentile_monster_img_set6/gentile_06.jpg" alt=""></div>
+                    </a>
+                </div>
+                <!-- a(상품명+가격)+a(위시리스트) -->
+                <div class="contents">
+                    <a href="#">
+                        <p class="name">로랑 W2</p>
+                        <p class="price">\340,000</p>
+                        <p class="re_stock">재입고예정</p>
+                    </a>
+                    <a href="#" title="위시리스트 저장">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </main>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인(로그아웃 초기화면)</title>
+</head>
+<body>
+    <h1>네이버</h1>
+    <button type="button" id="login_btn">로그인</button>
+    <!-- 
+    사용자 활동 감지 후 활동없을 시 자동 로그아웃 알고리즘 
+    1. index.html 접속 후 '로그인'버튼 클릭 후 login.html 이동
+    2. 사용자 활동을 감지하는 타이머 함수 제작(5초)
+    3. 사용자가 활동을 시작하면(키보드, 마우스) 5초 자동로그아웃 시간을 초기화할 수 있는 타이머정지함수 제작
+    -->
+    <script>
+        const loginBtn = document.querySelector('#login_btn');
+        loginBtn.addEventListener('click',()=>{
+            window.location.href = './login.html'
+        })
+    </script>
+</body>
+</html>

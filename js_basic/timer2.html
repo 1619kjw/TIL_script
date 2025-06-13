@@ -12,13 +12,13 @@
             overflow:hidden;
         }
         .slide_wrap .slide_container {
-            display:flex; flex-flow:row-reverse;
+            display:flex; flex-direction:row-reverse;/* 321로 역순으로 정렬 */
             /* 화면크기 변화시 그냥 짤려서(?) 너비주기. */
             /* 묶음으로 움직이니까 정확한 너비측정 */
             width:max-content;
             /* width:1200px; */
             /* width:calc(400px * 3) */
-            transform:translateX(-800px);
+            transform:translateX(-800px);/* 1번부터 보이도록 위치이동 */
             /* 
             0   = 400*0
             400 = 400*1

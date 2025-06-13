@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이머함수 setTimeout, clearTimeout</title>
+    <script src="./scripts/timer4.js" defer></script>
+    <style>
+        .hide {display:none;}/* 메세지 사라지기 */
+    </style>
+</head>
+<body>
+    <h1>타이머함수 활용예제</h1>
+    <h2>알림 메세지 자동숨김</h2>
+    <p>사용자에게 특정상황에서 알림 메세지를 보여줬다가 자동으로 사라지는 성공/오류 알림메세지(회원가입완료, 결제성공, 결제실패 등)</p>
+    <button type="button" id="join">회원가입</button>
+    <p class="join_msg"><!-- 메세지 출력 위치 --></p>
+    <div class="ad">광고</div>
+    <hr>
+    <h2>알림 메세지 후 다른 페이지로 이동</h2>
+    <p>"결제완료되었습니다" 메세지 출력 후 5초 뒤 timer3.html로 이동</p>
+    <button type="button" id="pay">결제하기</button>
+    <button type="button" id="pay_reset">결제취소</button>
+    <p class="pay_msg"><!-- 메세지 위치 --></p>
+</body>
+</html>
