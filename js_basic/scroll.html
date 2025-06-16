@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤 JS</title>
+    <script src="./scripts/scroll.js" defer></script>
+    <style>
+        html, body {/* 세로스크롤 만들어주고, 배경색으로 구분 */
+            /* height:200vh; */
+            background:linear-gradient(beige, yellow, skyblue, pink);
+        }
+        main section {
+            height:100vh; border:3px solid #000; font-size:5rem;
+            text-align:right;
+        }
+        button {
+            position:fixed; top:20px;
+            /* left:20px; 웹툰좌우화살표 때문에 주석지움*/
+            width:100px; height:100px;
+        }
+        button#btn1 {left:20px;}
+        button#top {left:140px;}
+        #blog_btn {top:120px;}
+        #cafe_btn {top:220px;}
+        #news_btn {top:320px;}
+        #webtoon_btn {top:420px;}
+        /* 웹툰 목록 디자인 */
+        .webtoon {font-size:1rem;}
+        .webtoon .toon_wrap_all{position:relative;/* 웹툰버튼들 부모위치기준 */}
+        .webtoon .toon_wrap {
+            width:600px; margin:0 auto; overflow-x:auto;
+        }
+        .webtoon .toon_wrap .toon_container {
+            display:flex; width:max-content;
+        }
+        .webtoon .toon_wrap .toon_container .toon {
+            width:200px; height:400px; margin-right:10px;
+            background:#fff; padding:10px;
+        }
+        .webtoon .toon_wrap .toon_container .toon img {}
+        .webtoon .toon_wrap .toon_container .toon h1 {}
+        .webtoon .toon_wrap .toon_container .toon p {}
+        .webtoon .toon_wrap_all button {/* 좌우화살표 공통 */
+            position:absolute; width:50px; height:50px;
+        }
+        .webtoon .toon_wrap_all .next {top:0px; right:0;}
+        .webtoon .toon_wrap_all .prev {top:0px; left:0;}
+    </style>
+</head>
+<body>
+    <button type="button" id="btn1">스크롤 제어 버튼1</button>
+    <button type="button" id="top">맨 위로</button>
+    <div class="nav">
+        <button type="button" id="blog_btn">블로그 바로가기</button>
+        <button type="button" id="cafe_btn">카페 바로가기</button>
+        <button type="button" id="news_btn">뉴스 바로가기</button>
+        <button type="button" id="webtoon_btn">웹툰 바로가기</button>
+    </div>
+    <main>
+        <section class="blog">blog</section>
+        <section class="cafe">cafe</section>
+        <section class="news">news</section>
+        <section class="webtoon">webtoon
+            <div class="toon_wrap_all">
+                <div class="toon_wrap">
+                    <div class="toon_container">
+                        <div class="toon toon1">
+                            <img src="" alt="웹툰제목">
+                            <h1>웹툰제목</h1>
+                            <p>웹툰설명</p>
+                            <p>별점</p>
+                        </div>
+                        <div class="toon toon2">
+                            <img src="" alt="웹툰제목">
+                            <h1>웹툰제목</h1>
+                            <p>웹툰설명</p>
+                            <p>별점</p>
+                        </div>
+                        <div class="toon toon3">
+                            <img src="" alt="웹툰제목">
+                            <h1>웹툰제목</h1>
+                            <p>웹툰설명</p>
+                            <p>별점</p>
+                        </div>
+                        <div class="toon toon4">
+                            <img src="" alt="웹툰제목">
+                            <h1>웹툰제목</h1>
+                            <p>웹툰설명</p>
+                            <p>별점</p>
+                        </div>
+                        <div class="toon toon5">
+                            <img src="" alt="웹툰제목">
+                            <h1>웹툰제목</h1>
+                            <p>웹툰설명</p>
+                            <p>별점</p>
+                        </div>
+                        <div class="toon toon6">
+                            <img src="" alt="웹툰제목">
+                            <h1>웹툰제목</h1>
+                            <p>웹툰설명</p>
+                            <p>별점</p>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="prev" title="이전웹툰보기">&lt;</button>
+                <button type="button" class="next" title="다음웹툰보기">&gt;</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

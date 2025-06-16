@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤 이벤트 활용</title>
+    <script src="./scripts/scroll_event.js" defer></script>
+    <link rel="stylesheet" href="../js_level1/styles/reset.css">
+    <style>
+        html, body {/* 스크롤 강제 생성 */
+            height:300vh;
+            background:linear-gradient(beige, pink, orange, yellow, skyblue);
+        }
+        /* 마켓컬리 대표색상 : #5f0080 */
+        header {
+            background:#fff; height:100px;
+            position:sticky; top:-60px;
+        }
+        header > * {padding:0 20px;}
+        header .top {
+            height:60px; 
+            display:flex; justify-content:space-between; align-items:center;
+        }
+        header .top h1 {}
+        header .top form {
+            border:2px solid #5f0080; width:300px; padding:10px;
+        }
+        header .top .user_menu {}
+        header .bottom {
+            height:40px; 
+            display:flex; justify-content:space-between; align-items:center;
+        }
+        header .bottom .category {}
+        header .bottom nav {}
+        header .bottom nav a {}
+        header .bottom .delivery {}
+        #top {
+            position:fixed; right:20px; bottom:20px;
+            border-radius:50%; width:100px; line-height:100px;
+            border:1px solid #bbb; text-align:center;
+            background:#fff;
+        }
+        /* 스크롤 이벤트 시 변경되는 bottom 디자인(아래) */
+        .active {box-shadow:0 5px 5px rgba(0,0,0,0.2);}
+        header .bottom form {
+            /* bottom에 form이 있으면 적용해라 */
+            background:#5f0080; color:#fff;
+            border:2px solid #5f0080; width:300px;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="top">TOP</a>
+    <header>
+        <div class="top">
+            <h1>로고</h1>
+            <form>검색</form>
+            <div class="user_menu">장바구니, 위시리스트, 위치정보</div>
+        </div>
+        <div class="bottom">
+            <a href="#" class="category">카테고리</a>
+            <nav>
+                <a href="#">신상품</a>
+                <a href="#">베스트</a>
+            </nav>
+            <a href="#" class="delivery">배송안내</a>
+        </div>
+    </header>
+</body>
+</html>
