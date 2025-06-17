@@ -1,5 +1,5 @@
 const kurlyDB = [
-    {
+    {/* 0번 인덱스 */
         src:'./images/kurly_001.jpg',
         name:'[해태] 여름 시즌 한정 트로피컬 에디션 간식 4종 (택1)',
         summary:'새콤달콤한 여름맛 간식',

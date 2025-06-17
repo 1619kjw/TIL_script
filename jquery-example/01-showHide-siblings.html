@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 hide/show 예제</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        .product {
+            border: 1px solid #ddd;
+            padding: 20px; margin-bottom: 10px;
+            width: 300px; text-align: center;
+        }
+        .product .description {
+            margin-top: 10px; padding: 10px;
+            background-color: #f9f9f9;
+        }
+        .product .hide {
+            padding: 8px 12px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="product">
+        <img src="https://i.pinimg.com/236x/73/11/59/731159e007036c77f00bafae906807a4.jpg" alt="">
+        <h3>남자 오버핏 다운셔츠</h3>
+        <button type="button" class="show">상품 설명 보기</button>
+        <div class="description">
+            <p>이 상품은 부드러운 면 소재로 제작되었으며, 스타일리시한 디자인이 특징입니다.</p>
+            <button type="button" class="hide">닫기</button>
+        </div>
+    </div>
+    <script>
+
+        const $showBtn = $('.show');
+        const $hideBtn = $('.hide');
+        const $desc = $('.description');
+        console.log($showBtn,$hideBtn,$desc);
+
+        
+        //JS
+        //DOM.style.속성 = '값'
+        
+        //Jquery
+        //$DOM.css('속성','값');
+        $desc.css('background-color','#ff0');//배경색
+        //$desc.css('display','none');//초기숨기기
+        $desc.hide();
+
+        //$DOM.이벤트(function(){실행내용})
+        //$DOM.이벤트(()=>{실행내용})
+        //show버튼을 클릭했을 때 description 보이기
+        $showBtn.click(function(){
+            $desc.show();//display:block 내장함수
+            //$desc.css('display','flex'); flex선언은 show가 아닌 직접작성
+        })
+        //hide버튼을 클릭했을 때 description 숨기기
+        $hideBtn.click(function(){$desc.hide();})
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03 쿠폰 할인 적용 예제</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <style>
+    .message {font-size: 1.2em;margin-top: 10px;}
+    /* 할인 적용 성공 메시지 스타일 */
+
+    /* 오류 메시지 스타일 */
+
+  </style>
+</head>
+<body>
+  <h1>결제 금액 할인 적용</h1>
+  <!-- 현재 결제 금액 표시 -->
+  <p>현재 결제 금액: <span id="currentPrice">32000</span>원</p>
+  
+  <!-- 쿠폰 입력 및 적용 버튼 -->
+  <div class="result">
+    <input type="text" id="couponInput" placeholder="쿠폰 코드를 입력하세요">
+    <button type="button" id="applyCoupon">쿠폰 적용</button>
+  </div>
+  
+  <!-- 결과 메시지 영역 -->
+  <div id="discountMessage" class="message"></div>
+  <div id="totalPrice" class="message"></div>
+
+  <script>
+
+    const $couponInput = $('#couponInput');//쿠폰코드입력창
+    const $applyCoupon = $('#applyCoupon');//쿠폰적용버튼]
+    let price = 32000; //제이쿼리DOM이 아니라 그냥 숫자를가진데이터라 $안붙임
+    console.log($couponInput,$applyCoupon);
+
+    //JS 경우 : couponInput.value
+    //Jquery 경우 : couponInput.val()
+    //1. 쿠폰적용버튼 클릭 시 쿠폰입력창이 빈값과 같다면 #discountMessage 위치에 "쿠폰 코드를 입력하세요" 출력하기
+    $applyCoupon.click(()=>{
+      if($couponInput.val() == ''){
+        //일회성 DOM 제이쿼리가 단순하단 특징을 활용하여 바로 작성해도 OK
+        $('#discountMessage').text('쿠폰 코드를 입력하세요');
+      }else if($couponInput.val() == 'discount10'){//discount10(쿠폰이름)
+        $('#discountMessage').text('쿠폰적용완료! 10% 할인되었습니다.');
+        $('#totalPrice').text('총 결제금액 :', price * 0.9);
+      }else{
+        //다른 쿠폰 코드 입력 시 모두 '유효하지 않은 쿠폰 코드입니다' 출력하기
+        $('#discountMessage').text('유효하지 않은 쿠폰 코드입니다');
+      }
+    })
+
+  </script>
+</body>
+</html>

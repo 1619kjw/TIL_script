@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02 쇼핑몰 아코디언 예제</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <style>
+    .section {
+      border: 1px solid #ccc;
+      margin-bottom: 10px; padding: 10px;
+    }
+    .section .title {
+      font-size: 1.2em; font-weight: 700;
+      cursor: pointer;
+      padding: 5px;
+    }
+    .section .content {
+      padding: 5px; margin-top: 5px;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <!-- 섹션 1 -->
+  <div class="section">
+    <div class="title" data-target="content1">제목 1</div>
+    <div id="content1" class="content">내용 1: 쇼핑몰 소개 및 주요 서비스 안내</div>
+  </div>
+  
+  <!-- 섹션 2 -->
+  <div class="section">
+    <div class="title" data-target="content2">제목 2</div>
+    <div id="content2" class="content">내용 2: 최신 상품 및 이벤트 소식</div>
+  </div>
+  
+  <!-- 섹션 3 -->
+  <div class="section">
+    <div class="title" data-target="content3">제목 3</div>
+    <div id="content3" class="content">내용 3: 고객 지원 및 문의 안내</div>
+  </div>
+  <script>
+
+    //js처럼 querySelectorAll 표시없이 제이쿼리는 대상을 선택하기만 하면 그 대상이 1개든 다수든 자동으로 선택처리해준다.
+    const $content = $('.content');
+    const $title = $('.title');
+    console.log($content,$title);
+
+    $content.hide();//for반복문없이 다수의 DOM 숨기기 가능
+    $title.click(function(){
+      //모두 숨기기
+      $content.hide();
+      //클릭한 현재대상(this)의 다음형제(next) 보이기(show)
+      //this 사용예정이라면 화살표함수가 아닌 익명함수로 작성 필수!
+      $(this).next('.content').show();
+    })
+
+  </script>
+</body>
+</html>

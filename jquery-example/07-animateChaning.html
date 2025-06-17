@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>체이닝 애니메이션 예제 - 프로모션 배너</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <style>
+    /* 프로모션 배너 스타일 */
+    #promoBanner {
+      width: 300px;
+      margin: 50px auto; padding: 20px;
+      background-color: #e74c3c; color: #fff;
+      border-radius: 8px;
+    }
+    #promoBanner h2 {font-size: 1.5em;}
+    #promoBanner p {margin: 10px 0;}
+    #promoBanner #animateBtn {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #c0392b; color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- 실제 쇼핑몰 메인 페이지의 일부로 활용될 수 있는 프로모션 배너 -->
+  <div id="promoBanner">
+    <h2>오늘의 특가</h2>
+    <p>최대 50% 할인 이벤트!</p>
+    <button id="animateBtn" type="button">자세히 보기</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>쇼핑몰 프로모션 팝업</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <style>
+    header, footer {
+      background: #333; color: #fff;
+      text-align: center; padding: 10px;
+    }
+    main {padding: 20px;}
+    /* 프로모션 팝업 및 오버레이 스타일 */
+    #overlay {
+      position: fixed;
+      top: 0;  left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 900;
+    }
+    #promoPopup {
+      position: fixed;
+      top: 20%; left: 50%; transform: translateX(-50%);
+      max-width: 400px;
+      background: #fff; border: 2px solid #007BFF;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      padding: 20px;
+      z-index: 1000;
+      border-radius: 8px;
+    }
+    #promoPopup h2 {color: #007BFF;}
+    #promoPopup p {margin: 10px 0;}
+    #promoPopup .closeBtn {
+      background: #007BFF; color: #fff;
+      padding: 10px 20px; margin-top: 10px;
+      cursor: pointer;
+      font-size: 1em;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>쇼핑몰</h1>
+  </header>
+  <main>
+    <h2>오늘의 추천 상품</h2>
+    <p>최신 상품과 특별한 혜택을 만나보세요.</p>
+    <!-- 메인 페이지 내용 -->
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 쇼핑몰. All rights reserved.</p>
+  </footer>
+  
+  <!-- 오버레이 (배경 어둡게 처리) -->
+  <div id="overlay"></div>
+  
+  <!-- 프로모션 팝업 -->
+  <div id="promoPopup">
+    <button type="button" class="closeBtn">닫기</button>
+    <h2>한정 프로모션!</h2>
+    <p>지금 구매 시 전 제품 10% 할인 혜택을 드립니다. 빠르게 확인하세요!</p>
+  </div>
+  <script>
+    //닫기 누르면 하얀팝업, 까만배경 자연스럽게 사라지기
+    //변수생성
+    const $closeBtn = $('.closeBtn');
+    const $promoPopup = $('#promoPopup');
+    const $overlay = $('#overlay');
+    //애니메이션
+    $closeBtn.click(function(){
+      $promoPopup.fadeOut();
+      $overlay.fadeOut();
+    })
+
+
+  </script>
+</body>
+</html>
