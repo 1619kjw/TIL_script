@@ -12,7 +12,7 @@
       width: 300px;
       margin: 50px auto; padding: 20px;
       background-color: #e74c3c; color: #fff;
-      border-radius: 8px;
+      border-radius: 8px; position:relative;
     }
     #promoBanner h2 {font-size: 1.5em;}
     #promoBanner p {margin: 10px 0;}
@@ -20,7 +20,7 @@
       padding: 10px 20px;
       font-size: 1em;
       background-color: #c0392b; color: #fff;
-      border-radius: 5px;
+      border-radius: 5px; 
       cursor: pointer;
     }
   </style>
@@ -32,5 +32,19 @@
     <p>최대 50% 할인 이벤트!</p>
     <button id="animateBtn" type="button">자세히 보기</button>
   </div>
+  <script>
+
+    const $bnr = $('#promoBanner');
+    console.log($bnr);
+
+    //배너에 마우스 올릴 시 다양한 애니메이션이 순차적으로 실행되기
+    $bnr.mouseover(function(){
+      $(this)
+        .animate({width:'350px',padding:'40px'},500)
+        .animate({borderRadius:'20px'},500)
+        .animate({left:'20px',top:'30px'},1000);
+    })
+
+  </script>
 </body>
 </html>
