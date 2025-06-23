@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>swiper-oustide_prev_next</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        * {margin:0; padding:0; line-height:1.0; box-sizing:border-box;}
+        main {}
+        main .swiper{
+            width:100%; height:400px;
+        }
+        main .swiper .swiper-wrapper {}
+        main .swiper .swiper-wrapper .swiper-slide {
+            background:url(./images/bnr3.jpg) center / cover;
+            width:600px;
+        }
+        main .swiper .swiper-wrapper .slide1 {}
+        main .swiper .swiper-wrapper .slide2 {}
+        main .swiper .swiper-wrapper .slide3 {}
+        main .swiper .swiper-wrapper .slide4 {}
+        main .swiper .swiper-wrapper .slide5 {}
+        main .swiper .swiper-wrapper .slide6 {}
+        main .swiper #js-prev1 {}
+        main .swiper #js-next1 {}
+        main .swiper_btn {}
+        main .swiper_btn a {}
+        main .swiper_btn #prev {}
+        main .swiper_btn #next {}
+    </style>
+</head>
+<body>
+    <main>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <!--슬라이드 개수 시작(아래 swiper slidesPerView보다 많이 생성)-->
+                <div class="swiper-slide slide1">1</div>
+                <div class="swiper-slide slide2">2</div>
+                <div class="swiper-slide slide3">3</div>
+                <div class="swiper-slide slide4">4</div>
+                <div class="swiper-slide slide5">5</div>
+                <div class="swiper-slide slide6">6</div>
+            </div>
+            <!-- navigation buttons -->
+            <div id="js-prev1" class="swiper-button-prev"></div>
+            <div id="js-next1" class="swiper-button-next"></div>
+        </div>
+        <!-- 업데이트 되면서 이걸로 작성하는 스와이퍼 기능 없어져서 이건 안함
+        <div class="swiper_btn">
+            <a href="#" id="prev">이전</a>
+            <a href="#" id="next">다음</a>
+        </div> -->
+    </main>
+    <script>
+        const mainSwiper = new Swiper('main .swiper',{
+            slidesPerView:'auto',
+            spaceBetween:14,
+            centeredSlides:true,
+            loop:true,
+            navigation:{
+                nextEl:'main #js-next1',
+                prevEl:'main #js-prev1',
+            },
+        });
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+

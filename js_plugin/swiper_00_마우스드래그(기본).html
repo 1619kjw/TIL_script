@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>swiper0 마우스드래그 동작</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        * {margin:0; padding:0; line-height:1.0; box-sizing:border-box;}
+        /* 베스트상품 */
+        .best_swiper {/* 부모에 크기 줘서 자식자손이 따라오게 */
+            /* 슬라이드 보이는 크기 설정 */
+            width:1000px; height:600px;
+        }
+        .best_swiper .swiper-wrapper {}
+        .best_swiper .swiper-wrapper .swiper-slide {
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+        }
+        .best_swiper .swiper-wrapper .slide1 {background-image:url(./images/bnr1.jpg);}
+        .best_swiper .swiper-wrapper .slide2 {background-image:url(./images/bnr2.jpg);}
+        .best_swiper .swiper-wrapper .slide3 {background-image:url(./images/bnr3.jpg);}
+        .best_swiper .swiper-wrapper .slide4 {background-image:url(./images/bnr4.jpg);}
+        /* 신제품 */
+        .new_swiper {/* 부모에 크기 줘서 자식자손이 따라오게 */
+            /* 슬라이드 보이는 크기 설정 */
+            width:800px; height:400px;
+        }
+        .new_swiper .swiper-wrapper {}
+        .new_swiper .swiper-wrapper .swiper-slide {}
+        .new_swiper .swiper-wrapper .swiper-slide img {
+            height:100%;
+        }
+        .new_swiper .swiper-wrapper .slide1 {}
+        .new_swiper .swiper-wrapper .slide2 {}
+        .new_swiper .swiper-wrapper .slide3 {}
+        /* 세일상품 */
+        .sale_swiper {width:1200px; height:450px;}
+        .sale_swiper .swiper_wrapper {}
+        .sale_swiper .swiper_wrapper .swiper-slide {}
+        .sale_swiper .swiper_wrapper .swiper-slide img {height:100%;}
+        .sale_swiper .swiper_wrapper .swiper-slide .slide1 {}
+        .sale_swiper .swiper_wrapper .swiper-slide .slide2 {}
+        .sale_swiper .swiper_wrapper .swiper-slide .slide3 {}
+        .sale_swiper .swiper_wrapper .swiper-slide .slide4 {}
+    </style>
+</head>
+<body>
+    <section>
+        <h1>베스트</h1>
+        <div class="swiper best_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide1"></div>
+                <div class="swiper-slide slide2"></div>
+                <div class="swiper-slide slide3"></div>
+                <div class="swiper-slide slide4"></div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1>신제품</h1>
+        <!-- 800x400 스와이퍼 3장짜리 슬라이드 제작 -->
+        <div class="swiper new_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide1"><img src="./images/bnr1.jpg" alt=""></div>
+                <div class="swiper-slide slide2"><img src="./images/bnr2.jpg" alt=""></div>
+                <div class="swiper-slide slide3"><img src="./images/bnr3.jpg" alt=""></div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1>세일상품</h1>
+        <!-- 1200x450 4장 슬라이드 생성(이미지태그 형태) -->
+        <div class="swiper sale_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide1"><img src="./images/bnr1.jpg" alt=""></div>
+                <div class="swiper-slide slide2"><img src="./images/bnr2.jpg" alt=""></div>
+                <div class="swiper-slide slide3"><img src="./images/bnr3.jpg" alt=""></div>
+                <div class="swiper-slide slide4"><img src="./images/bnr4.jpg" alt=""></div>
+            </div>
+        </div>
+    </section>
+    <script>
+        /* Swipter함수 적용 HTML대상을 괄호안에 정확히 작성한다. */
+        const bestSwiper = new Swiper('.best_swiper');
+        const newSwiper = new Swiper('.new_swiper');
+        const saleSwiper = new Swiper('.sale_swiper');
+    </script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>swiper-pagenation1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        * {margin:0; padding:0; line-height:1.0; box-sizing:border-box;}
+        .new {
+            width:1000px; height:400px;
+        }
+        .new .swiper-wrapper {}
+        .new .swiper-wrapper .swiper-slide {
+            background:url(./images/bnr1.jpg) center / cover;
+        }
+        .new .swiper-wrapper .slide1 {}
+        .new .swiper-wrapper .slide2 {}
+        .new .swiper-wrapper .slide3 {}
+        .new .swiper-wrapper .slide4 {}
+        main {
+            background:yellow; padding:20px;
+            position:relative;
+        }
+        main .swiper-pagination {}
+        main .swiper-pagination .swiper-pagination-bullet {background:#f00; opacity:0.5;}
+    </style>
+</head>
+<body>
+    <main>
+        <div class="swiper new">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide1"></div>
+                <div class="swiper-slide slide2"></div>
+                <div class="swiper-slide slide3"></div>
+                <div class="swiper-slide slide4"></div>
+            </div>
+            <!-- (선택) 슬라이드 페이지번호 표시할때 작성 -->
+            <!-- 페이지번호를 슬라이드 안에서 보고 싶을땐 swiper부모의 자식으로 배치 -->
+            <!-- 페이지번호를 슬라이드 밖에서 보고 싶을땐 swiper의 형제로 배치 -->
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+        <div class="swiper-pagination"></div><!-- swiper 형제위치 -->
+    </main>
+    <script>
+        const newSlide = new Swiper('.new',{
+            pagination:{
+                el:'.new + .swiper-pagination',//대상설정
+                type:'bullets',
+            },
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+

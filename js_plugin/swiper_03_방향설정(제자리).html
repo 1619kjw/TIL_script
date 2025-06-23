@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>swiper-direction1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        * {margin:0; padding:0; line-height:1.0; box-sizing:border-box;}
+        .swiper {/* 뉴스제목이 들어갈 만큼의 크기로 높이는 짧게 설정함 */
+            width:1000px; height:40px; background:#ddd;
+        }
+        .swiper .swiper-wrapper {}
+        .swiper .swiper-wrapper .swiper-slide {background:#ff0;}
+        .swiper .swiper-wrapper .swiper-slide .slide1 {}
+        .swiper .swiper-wrapper .swiper-slide .slide2 {}
+        .swiper .swiper-wrapper .swiper-slide .slide3 {}
+        .swiper .swiper-wrapper .swiper-slide .slide4 {}
+    </style>
+</head>
+<body>
+    <div class="swiper" id="news">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1"><a href="#">“작은 변화에도 경각심을”…심상치 않은 중동사태, 대응 모색나선 금융당국</a></div>
+            <div class="swiper-slide slide2"><a href="#">국정기획위 “공직사회, 세상 바뀐 것을 전혀 인지 못하는 것 아닌가”</a></div>
+            <div class="swiper-slide slide3"><a href="#">국정기획위 “공직사회, 세상 바뀐 것을 전혀 인지 못하는 것 아닌가”</a></div>
+            <div class="swiper-slide slide4"><a href="#">교통 강한 부천시…도시발전 청사진 '3·4·5 프로젝트' 가동</a></div>
+        </div>
+    </div>
+    <script>
+        const newSwiper = new Swiper('#news',{
+            effect:'fade',
+            autoplay:{delay:1000},
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+

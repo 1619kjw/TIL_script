@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>swiper-play_pause</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        * {margin:0; padding:0; line-height:1.0; box-sizing:border-box;}
+        main {}
+        main .swiper {
+            width:400px; height:600px;
+        }
+        main .swiper .swiper-wrapper {}
+        main .swiper .swiper-wrapper .swiper-slide {
+            background:url(./images/bnr1.jpg) center / cover;
+        }
+        main .swiper .swiper-wrapper .swiper-slide .slide1 {}
+        main .swiper .swiper-wrapper .swiper-slide .slide2 {}
+        main .swiper .swiper-wrapper .swiper-slide .slide3 {}
+        main .swiper .swiper-wrapper .swiper-slide .slide4 {}
+        main .btn {}
+        main .btn a {}
+        main .btn a.pause {}
+        main .btn a.start {}
+    </style>
+</head>
+<body>
+    <main>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide1"></div>
+                <div class="swiper-slide slide2"></div>
+                <div class="swiper-slide slide3"></div>
+                <div class="swiper-slide slide4"></div>
+            </div>
+        </div><!--e:swiper-->
+        <div class="btn">
+            <a href="#" class="pause">일시정지</a>
+            <a href="#" class="start">다시시작</a>
+        </div>
+    </main>
+    
+
+    <script>
+        const swiper = new Swiper('main .swiper',{
+            autoplay:{delay:2500,},//2.5초 간격으로 반복재생
+            loop:true,
+        });
+        //스와이퍼변수명.autoplay.stop() 일시정지
+        //스와이퍼변수명.autoplay.start() 재생
+        const pauseBtn = document.querySelector('.pause');
+        const startBtn = document.querySelector('.start');
+        console.log(pauseBtn,startBtn);
+        pauseBtn.addEventListener('click',()=>{
+            swiper.autoplay.stop()
+        })
+        startBtn.addEventListener('click',()=>{
+            swiper.autoplay.start()
+        })
+    </script>
+</body>
+</html>
+
+
+
+
+
+

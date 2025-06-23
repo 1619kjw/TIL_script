@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>swiper-perview1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        * {margin:0; padding:0; line-height:1.0; box-sizing:border-box;}
+        .swiper {
+            max-width:1400px;
+            min-width:320px;
+            padding:0 15px;
+            height:400px;
+        }
+        .swiper .swiper-wrapper {}
+        .swiper .swiper-wrapper .swiper-slide {
+            background:url(./images/bnr4.jpg) center / cover;
+            width:350px;
+        }
+        .swiper .swiper-wrapper .swiper-slide .slide1 {}
+        .swiper .swiper-wrapper .swiper-slide .slide2 {}
+        .swiper .swiper-wrapper .swiper-slide .slide3 {}
+        .swiper .swiper-wrapper .swiper-slide .slide4 {}
+        .swiper .swiper-wrapper .swiper-slide .slide5 {}
+        .swiper .swiper-wrapper .swiper-slide .slide6 {}
+    </style>
+</head>
+<body>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <!--슬라이드 개수 시작(아래 swiper slidesPerView보다 많이 생성)-->
+            <div class="swiper-slide slide1"></div>
+            <div class="swiper-slide slide2"></div>
+            <div class="swiper-slide slide3"></div>
+            <div class="swiper-slide slide4"></div>
+            <div class="swiper-slide slide5"></div>
+            <div class="swiper-slide slide6"></div>
+        </div>
+    </div>
+    <script>
+        //320~640 모바일 2.5
+        //641~800 태블릿 3
+        //801~1400 데스크탑 4
+        const swiperRespon = new Swiper('.swiper',{
+            slidesPerView:2.5,//모바일
+            spaceBetween:10,
+            breakpoints:{
+                641:{//641 이상일 때(태블릿)
+                    slidesPerView:3,
+                },
+                801:{//801 이상일 때(데스크탑)
+                    slidesPerView:4,
+                },
+            }
+        })
+    </script>
+</body>
+</html>
+
+
+
+
+
+

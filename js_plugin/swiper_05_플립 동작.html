@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>swiper-direction1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        * {margin:0; padding:0; line-height:1.0; box-sizing:border-box;}
+        #newSlide {
+            width:1000px; height:450px;
+        }
+        #newSlide .swiper-wrapper {}
+        #newSlide .swiper-wrapper .swiper-slide {}
+        #newSlide .swiper-wrapper .slide1 {}
+        #newSlide .swiper-wrapper .slide2 {}
+        #newSlide .swiper-wrapper .slide3 {}
+        #newSlide .swiper-wrapper .slide4 {}
+    </style>
+</head>
+<body>
+    <div class="swiper" id="newSlide">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1"><img src="./images/slide.jpg" alt=""></div>
+            <div class="swiper-slide slide2"><img src="./images/slide.jpg" alt=""></div>
+            <div class="swiper-slide slide3"><img src="./images/slide.jpg" alt=""></div>
+            <div class="swiper-slide slide4"><img src="./images/slide.jpg" alt=""></div>
+        </div>
+    </div>
+    <script>
+        const newSlide = new Swiper('#newSlide',{
+            effect:'flip',
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
