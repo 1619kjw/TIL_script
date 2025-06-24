@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반얀트리 해운대 부산</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div id="popup"><a href="#">이너스 멤버 상담 예약</a></div>
+    <header>
+        <h1><a href="#"><img src="images/logo_w.png" alt=""></a></h1>
+        <nav><a href="#">MENU</a></nav>
+    </header>
+    <main>
+        <div class="bg bg1">
+            <div class="txt"><h1>banyan tree haeundae busan</h1></div>
+        </div>
+        <div class="bg bg2">
+            <div class="txt">
+                <h1>the best sanctuary for the senses</h1>
+                <p>최상의 모든 조건, 반얀트리를 빛내는 브랜드 컬렉션, 그 중에서도 반약트리(Banyan Tree)는<br>명실상부한 럭셔리 호스피탈리티의 최상급 브랜드입니다.<br>전세계의 가장 아름답고 장엄한 자연 속에서 누리는 지역 고유의 경험.<br>최고의 휴양을 선사하는 반얀트리를 만나보십시오.</p>
+            </div>
+        </div>
+        <div class="bg bg3">
+            <div class="txt">
+                <h1>banyan tree haeundae</h1>
+                <p>부산의 아름다운 오시리아, 그 곳 해변과 한 걸음.<br>귀하께 2025년 반얀트리 해운대 부산의 탄생 소식을 전합니다.<br>세계 곳곳에서 경험하던 반약트리의 휴식, 그 이상을 이제, 부산에서도 만나실 수 있습니다.</p>
+            </div>
+        </div>
+        <div class="bg bg4">
+            <div class="txt">
+                <h1>a home in the perfect world</h1>
+                <p>반얀트리는 22개 국가에 48개의 호텔과 리조트, 64개의 스파, 골프 코스 및 레지던스를 운영하는 글로벌 기업입니다.<br>
+                    완벽한 안식처를 향한 멈추지 않는 반얀트리의 노력그것은 이미, 국제적 권위를 가진 2700여 개 이상의<br>
+                    수상 경력이 증명하고 있습니다. 반얀트리 해운대 부산과 함께 세계 곳곳 이름 난 비경 속의 반얀트리를 만나십시오.<br>
+                    지상 최고의 휴식을 선사하겠습니다.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="logo"><img src="images/footer_logo.jpg" alt=""></p>
+        <p class="copy">copyright &copy; 2022 banyan tree haendaevusan. all rights reserved.</p>
+    </footer>
+    
+    <script>
+        //같은 애니메이션 적용되는 bg2,3,4 모두 잡는 변수
+        const sameAni = document.querySelectorAll('.bg1 ~ .bg');
+        console.log(sameAni);
+        //bg2,3,4 모두 잡는 변수 sameAni이용하여 동일애니메이션적용하기
+        for(let i=0; i<3; i++){
+            console.log(i);
+            document.addEventListener("DOMContentLoaded", (event) => {
+            gsap.registerPlugin(ScrollTrigger)
+            // gsap code here!
+            gsap.fromTo('sameAni[i]',{//bg2배경 번쩍하는 애니메이션
+                opacity:0,
+            },{
+                scrollTrigger:{
+                    trigger:'sameAni[i]',
+                    start:'top 80%',
+                    end:'bottom 20%',
+                    markers:true,
+                },
+                duration:1,
+                opacity:1,
+            })
+            gsap.fromTo('sameAni[i] h1',{//제목글자 위로이동
+                y:50,
+            },{
+                scrollTrigger:{
+                    trigger:'sameAni[i]',
+                    start:'top 80%',
+                    end:'bottom 20%',
+                    markers:true,
+                },
+                duration:1,
+                y:-50,
+            })
+            gsap.fromTo('sameAni[i] p',{//내용글자 위로이동
+                y:50,
+            },{
+                scrollTrigger:{
+                    trigger:'sameAni[i]',
+                    start:'top 80%',
+                    end:'bottom 20%',
+                    markers:true,
+                },
+                duration:1.5,
+                y:-50,
+            })
+        });
+        }
+    </script>
+</body>
+</html>
