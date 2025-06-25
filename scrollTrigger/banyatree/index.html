@@ -51,7 +51,7 @@
         const sameAni = document.querySelectorAll('.bg1 ~ .bg');
         console.log(sameAni);
         //bg2,3,4 모두 잡는 변수 sameAni이용하여 동일애니메이션적용하기
-        for(let i=0; i<3; i++){
+        for(let i of sameAni){
             console.log(i);
             document.addEventListener("DOMContentLoaded", (event) => {
             gsap.registerPlugin(ScrollTrigger)
